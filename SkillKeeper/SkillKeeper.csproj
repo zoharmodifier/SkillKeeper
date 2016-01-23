@@ -69,10 +69,11 @@
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
+    <Reference Include="INIFileParser">
+      <HintPath>..\packages\ini-parser.2.2.4\lib\net20\INIFileParser.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp">
       <HintPath>D:\restsharp\RestSharp.dll</HintPath>
     </Reference>
@@ -95,6 +96,7 @@
     <Compile Include="ConfirmSave.Designer.cs">
       <DependentUpon>ConfirmSave.cs</DependentUpon>
     </Compile>
+    <Compile Include="IniFile.cs" />
     <Compile Include="SKChallongeImporter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,7 +152,7 @@
     <EmbeddedResource Include="SKTioImporter.resx">
       <DependentUpon>SKTioImporter.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Properties\app.manifest" />
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\Match.datasource" />
     <None Include="Properties\DataSources\Person.datasource" />
     <None Include="Properties\DataSources\TioPlayer.datasource" />

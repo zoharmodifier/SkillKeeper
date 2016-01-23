@@ -19,6 +19,18 @@ namespace SkillKeeper
         public SKChallongeLoader()
         {
             InitializeComponent();
+
+            try
+            {
+                // Try to load settings from ini file.
+                IniFile iniFile = IniFile.GetInstance();
+                apiKey = iniFile.Data[IniFile.AccountSectionName][IniFile.AccountApiKeyKeyName];
+                subdomain = iniFile.Data[IniFile.AccountSectionName][IniFile.AccountSubdomainKeyName];
+            }
+            catch (NullReferenceException)
+            {
+                // If not defined in the ini, then ignore the exception.
+            }
         }
 
         private void SKChallongeLoader_Load(object sender, EventArgs e)
