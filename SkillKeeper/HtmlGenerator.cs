@@ -108,10 +108,17 @@ namespace SkillKeeper
             IniFile iniFile = IniFile.GetInstance();
             foreach (var character in characters)
             {
-                string url = iniFile.Data[IniFile.IconUrlsSectionName][character];
-                if (!string.IsNullOrWhiteSpace(url))
+                try
                 {
-                    imgUrls.Append(string.Format(HtmlGenerator.ImgSrc, url));
+                    string url = iniFile.Data[IniFile.IconUrlsSectionName][character];
+                    if (!string.IsNullOrWhiteSpace(url))
+                    {
+                        imgUrls.Append(string.Format(HtmlGenerator.ImgSrc, url));
+                    }
+                }
+                catch (NullReferenceException)
+                {
+                    // Skip if character was not found in ini file.
                 }
             }
             return imgUrls.ToString();
