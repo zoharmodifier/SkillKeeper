@@ -165,6 +165,9 @@
             this.saveWorldDialog = new System.Windows.Forms.SaveFileDialog();
             this.importFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.exportCSVDialog = new System.Windows.Forms.SaveFileDialog();
+            this.exportToHtmlButton = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.exportTopNumPlayersTextBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.fileTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -1086,7 +1089,7 @@
             this.player1DataGridViewTextBoxColumn.HeaderText = "Player1";
             this.player1DataGridViewTextBoxColumn.Name = "player1DataGridViewTextBoxColumn";
             this.player1DataGridViewTextBoxColumn.ReadOnly = true;
-            this.player1DataGridViewTextBoxColumn.Width = 65;
+            this.player1DataGridViewTextBoxColumn.Width = 67;
             // 
             // player2DataGridViewTextBoxColumn
             // 
@@ -1095,7 +1098,7 @@
             this.player2DataGridViewTextBoxColumn.HeaderText = "Player2";
             this.player2DataGridViewTextBoxColumn.Name = "player2DataGridViewTextBoxColumn";
             this.player2DataGridViewTextBoxColumn.ReadOnly = true;
-            this.player2DataGridViewTextBoxColumn.Width = 65;
+            this.player2DataGridViewTextBoxColumn.Width = 67;
             // 
             // winnerDataGridViewTextBoxColumn
             // 
@@ -1103,7 +1106,7 @@
             this.winnerDataGridViewTextBoxColumn.DataPropertyName = "Winner";
             this.winnerDataGridViewTextBoxColumn.HeaderText = "Winner";
             this.winnerDataGridViewTextBoxColumn.Name = "winnerDataGridViewTextBoxColumn";
-            this.winnerDataGridViewTextBoxColumn.Width = 64;
+            this.winnerDataGridViewTextBoxColumn.Width = 66;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
@@ -1111,7 +1114,7 @@
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.Width = 83;
+            this.descriptionDataGridViewTextBoxColumn.Width = 85;
             // 
             // Column1
             // 
@@ -1120,7 +1123,7 @@
             this.Column1.HeaderText = "Date";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 53;
+            this.Column1.Width = 55;
             // 
             // orderDataGridViewTextBoxColumn
             // 
@@ -1128,7 +1131,7 @@
             this.orderDataGridViewTextBoxColumn.DataPropertyName = "Order";
             this.orderDataGridViewTextBoxColumn.HeaderText = "Order";
             this.orderDataGridViewTextBoxColumn.Name = "orderDataGridViewTextBoxColumn";
-            this.orderDataGridViewTextBoxColumn.Width = 56;
+            this.orderDataGridViewTextBoxColumn.Width = 58;
             // 
             // matchBindingSource
             // 
@@ -1137,6 +1140,9 @@
             // leaderboardTab
             // 
             this.leaderboardTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.leaderboardTab.Controls.Add(this.exportTopNumPlayersTextBox);
+            this.leaderboardTab.Controls.Add(this.label39);
+            this.leaderboardTab.Controls.Add(this.exportToHtmlButton);
             this.leaderboardTab.Controls.Add(this.leaderboardDatePicker);
             this.leaderboardTab.Controls.Add(this.label30);
             this.leaderboardTab.Controls.Add(this.exportButton);
@@ -1208,7 +1214,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Team";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 57;
+            this.dataGridViewTextBoxColumn2.Width = 59;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1217,7 +1223,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "Name";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 58;
+            this.dataGridViewTextBoxColumn1.Width = 60;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -1226,7 +1232,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Characters";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 81;
+            this.dataGridViewTextBoxColumn3.Width = 83;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -1235,7 +1241,7 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Wins";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 54;
+            this.dataGridViewTextBoxColumn4.Width = 56;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -1244,7 +1250,7 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Losses";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 63;
+            this.dataGridViewTextBoxColumn5.Width = 65;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -1253,7 +1259,7 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Draws";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 60;
+            this.dataGridViewTextBoxColumn6.Width = 62;
             // 
             // totalGamesDataGridViewTextBoxColumn
             // 
@@ -1262,7 +1268,7 @@
             this.totalGamesDataGridViewTextBoxColumn.HeaderText = "Total Played";
             this.totalGamesDataGridViewTextBoxColumn.Name = "totalGamesDataGridViewTextBoxColumn";
             this.totalGamesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.totalGamesDataGridViewTextBoxColumn.Width = 89;
+            this.totalGamesDataGridViewTextBoxColumn.Width = 91;
             // 
             // winPercentDataGridViewTextBoxColumn
             // 
@@ -1271,7 +1277,7 @@
             this.winPercentDataGridViewTextBoxColumn.HeaderText = "Win %";
             this.winPercentDataGridViewTextBoxColumn.Name = "winPercentDataGridViewTextBoxColumn";
             this.winPercentDataGridViewTextBoxColumn.ReadOnly = true;
-            this.winPercentDataGridViewTextBoxColumn.Width = 60;
+            this.winPercentDataGridViewTextBoxColumn.Width = 62;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -1280,7 +1286,7 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Score";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 58;
+            this.dataGridViewTextBoxColumn7.Width = 60;
             // 
             // LastMatch
             // 
@@ -1289,7 +1295,7 @@
             this.LastMatch.HeaderText = "Last Match";
             this.LastMatch.Name = "LastMatch";
             this.LastMatch.ReadOnly = true;
-            this.LastMatch.Width = 83;
+            this.LastMatch.Width = 85;
             // 
             // personBindingSource
             // 
@@ -1533,6 +1539,33 @@
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
+            // exportToHtmlButton
+            // 
+            this.exportToHtmlButton.Location = new System.Drawing.Point(114, 440);
+            this.exportToHtmlButton.Name = "exportToHtmlButton";
+            this.exportToHtmlButton.Size = new System.Drawing.Size(104, 23);
+            this.exportToHtmlButton.TabIndex = 4;
+            this.exportToHtmlButton.Text = "Export to HTML";
+            this.exportToHtmlButton.UseVisualStyleBackColor = true;
+            this.exportToHtmlButton.Click += new System.EventHandler(this.exportToHtmlButton_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(224, 445);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(116, 13);
+            this.label39.TabIndex = 5;
+            this.label39.Text = "(HTML) Only show top:";
+            // 
+            // exportTopNumPlayersTextBox
+            // 
+            this.exportTopNumPlayersTextBox.Location = new System.Drawing.Point(346, 442);
+            this.exportTopNumPlayersTextBox.Name = "exportTopNumPlayersTextBox";
+            this.exportTopNumPlayersTextBox.Size = new System.Drawing.Size(36, 20);
+            this.exportTopNumPlayersTextBox.TabIndex = 6;
+            this.exportTopNumPlayersTextBox.Text = "10";
+            // 
             // SkillKeeper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1718,6 +1751,9 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox settingsDecayIntBox;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox exportTopNumPlayersTextBox;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Button exportToHtmlButton;
     }
 }
 

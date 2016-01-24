@@ -1246,6 +1246,20 @@ namespace SkillKeeper
                 csvFileWriter.Close();
             }
         }
+        
+        private void exportToHtmlButton_Click(object sender, EventArgs e)
+        {
+            HtmlGenerator htmlGen = new HtmlGenerator(this.leaderBoardGrid);
+            int onlyShowTopNum;
+            Int32.TryParse(this.exportTopNumPlayersTextBox.Text, out onlyShowTopNum);
+            if(onlyShowTopNum <= 0)
+            {
+                onlyShowTopNum = Int32.MaxValue;
+            }
+
+            Clipboard.SetText(htmlGen.GetGridAsHtml(onlyShowTopNum));
+            MessageBox.Show("HTML code copied to clipboard.", "HTML Copied", MessageBoxButtons.OK);
+        }
 
         // ------------------------------------
         // Settings Tab
